@@ -86,8 +86,8 @@ explore: sales_orders {
     type: left_outer
     relationship: one_to_many
     sql_on: ${sales_orders.material_number_matnr}=${materials_md.material_number_matnr}
-          and ${sales_orders.client_mandt}=${materials_md.client_mandt} and
-          ${materials_md.language_spras}=${language_map.language_key};;
+          and ${sales_orders.client_mandt}=${materials_md.client_mandt}
+          ;;
   }
 
   join: customers_md {
@@ -110,7 +110,7 @@ explore: sales_orders {
     relationship: one_to_many
     sql_on: ${customers_md.country_key_land1}=${countries_md.country_key_land1}
           and ${countries_md.client_mandt}=${sales_orders.client_mandt}
-          and ${countries_md.language_spras}=${language_map.language_key} ;;
+           ;;
   }
 
   join: sales_organizations_md {
@@ -118,14 +118,14 @@ explore: sales_orders {
     relationship: one_to_many
     sql_on: ${sales_organizations_md.sales_org_vkorg}=${sales_orders.sales_organization_vkorg}
           and ${sales_organizations_md.client_mandt}=${sales_orders.client_mandt}
-          and ${sales_organizations_md.language_spras}=${language_map.language_key} ;;
+           ;;
     }
     join: distribution_channels_md {
       type: left_outer
       relationship: one_to_many
       sql_on: ${distribution_channels_md.distribution_channel_vtweg}=${sales_orders.distribution_channel_vtweg}
             and  ${sales_orders.client_mandt}=${distribution_channels_md.client_mandt}
-            and ${distribution_channels_md.language_spras}=${language_map.language_key};;
+            ;;
     }
 
     join: sales_order_pricing {
@@ -157,7 +157,7 @@ explore: sales_orders {
       relationship: one_to_many
       sql_on: ${sales_orders.client_mandt}=${divisions_md.client_mandt}
             and ${sales_orders.division_spart}=${divisions_md.division_spart}
-            and ${language_map.language_key}=${divisions_md.language_key_spras} ;;
+             ;;
     }
 
     join: sales_order_header_status {
