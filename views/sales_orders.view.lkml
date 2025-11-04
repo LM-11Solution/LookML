@@ -1995,7 +1995,7 @@ view: sales_orders {
     type: number
     sql:if(${deliveries.count_of_delivery}=0,0,round(${count_return_order}/NULLIF(${deliveries.count_of_delivery},0)*100,2)) ;;
     link: {
-      label: "Return Order Detailed Report"
+      label: "Informe detallado de la orden de devolución"
       url: "/dashboards/cortex_sap_operational::sap_order_to_cash_o2c_02_c_returned_ordersperformance_tuning?Region={{ _filters['countries_md.country_name_landx']| url_encode }}&Year={{ _filters['sales_orders.creation_date_erdat_date']| url_encode }}&Sales+Org={{ _filters['sales_organizations_md.sales_org_name_vtext']| url_encode }}&Distribution+Channel={{ _filters['distribution_channels_md.distribution_channel_name_vtext']| url_encode }}&Product={{ _filters['materials_md.material_text_maktx']| url_encode }}&Division={{ _filters['divisions_md.division_name_vtext']| url_encode }}&Currency={{ _filters['currency_conversion_new.tcurr']| url_encode }}"
     }
     hidden: no
@@ -2019,7 +2019,7 @@ view: sales_orders {
     type: number
     sql: if(${count_total_orders}=0,0,round(${count_canceled_order}/NULLIF(${count_total_orders},0)*100,2)) ;;
     link: {
-      label: "Cancelled Order Detailed Report"
+      label: "Informe detallado del pedido cancelado"
       url: "/dashboards/cortex_sap_operational::sap_order_to_cash_o2c_02_a_cancelled_ordersperformance_tuning?Region={{ _filters['countries_md.country_name_landx']| url_encode }}&Year={{ _filters['sales_orders.creation_date_erdat_date']| url_encode }}&Sales+Org={{ _filters['sales_organizations_md.sales_org_name_vtext']| url_encode }}&Distribution+Channel={{ _filters['distribution_channels_md.distribution_channel_name_vtext']| url_encode }}&Product={{ _filters['materials_md.material_text_maktx']| url_encode }}&Division={{ _filters['divisions_md.division_name_vtext']| url_encode }}&Currency={{ _filters['currency_conversion_new.tcurr']| url_encode }}"
     }
     hidden: no
@@ -2058,7 +2058,7 @@ view: sales_orders {
     sql: if(${count_total_orders}=0,0,round(${count_one_touch_order}/NULLIF(${count_total_orders},0)*100,2)) ;;
     hidden: no
     link: {
-      label: "One Touch Order Detailed Report"
+      label: "Informe detallado del pedido con un solo toque"
       url: "/dashboards/cortex_sap_operational::sap_order_to_cash_o2c_02_b_one_touch_orderperformance_tuning?Region={{ _filters['countries_md.country_name_landx']| url_encode }}&Year={{ _filters['sales_orders.creation_date_erdat_date']| url_encode }}&Sales+Org={{ _filters['sales_organizations_md.sales_org_name_vtext']| url_encode }}&Distribution+Channel={{ _filters['distribution_channels_md.distribution_channel_name_vtext']| url_encode }}&Product={{ _filters['materials_md.material_text_maktx']| url_encode }}&Division={{ _filters['divisions_md.division_name_vtext']| url_encode }}&Currency={{ _filters['currency_conversion_new.tcurr']| url_encode }}"
     }
   }
@@ -2096,7 +2096,7 @@ view: sales_orders {
     value_format_name: Greek_Number_Format
     sql: ${list_price_glob_curr} ;;
     link: {
-      label: "Price Adjustments based on Product Availability"
+      label: "Ajustes de precio basados en la disponibilidad del producto"
       url: "/dashboards/cortex_sap_operational::sap_order_to_cash_o2c_05_b_price_adjustments_based_on_product_availabilityperformance_tuning?Region={{ _filters['countries_md.country_name_landx']| url_encode }}&Year={{ _filters['sales_order_pricing.checkbox_kdatu_date']| url_encode }}&Sales+Org={{ _filters['sales_organizations_md.sales_org_name_vtext']| url_encode }}&Distribution+Channel={{ _filters['distribution_channels_md.distribution_channel_name_vtext']| url_encode }}&Product={{ _filters['materials_md.material_text_maktx']| url_encode }}&Division={{ _filters['divisions_md.division_name_vtext']| url_encode }}&Currency={{ _filters['currency_conversion_new.tcurr']| url_encode }}"
     }
     hidden: no
@@ -2133,7 +2133,7 @@ view: sales_orders {
     value_format_name: Greek_Number_Format
     sql: ${adjusted_price_glob_curr} ;;
     link: {
-      label: "Price Adjustments based on Product Availability"
+      label: "Ajustes de precio basados en la disponibilidad del producto"
       url: "/dashboards/cortex_sap_operational::sap_order_to_cash_o2c_05_b_price_adjustments_based_on_product_availabilityperformance_tuning?Region={{ _filters['countries_md.country_name_landx']| url_encode }}&Year={{ _filters['sales_order_pricing.checkbox_kdatu_date']| url_encode }}&Sales+Org={{ _filters['sales_organizations_md.sales_org_name_vtext']| url_encode }}&Distribution+Channel={{ _filters['distribution_channels_md.distribution_channel_name_vtext']| url_encode }}&Product={{ _filters['materials_md.material_text_maktx']| url_encode }}&Division={{ _filters['divisions_md.division_name_vtext']| url_encode }}&Currency={{ _filters['currency_conversion_new.tcurr']| url_encode }}"
     }
     hidden: no
@@ -2152,7 +2152,7 @@ view: sales_orders {
     value_format_name: Greek_Number_Format
     sql: ${list_price_glob_curr} ;;
     link: {
-      label: "Price Adjustments based on Product Availability"
+      label: "Ajustes de precio basados ​​en la disponibilidad del producto"
       url: "/dashboards/cortex_sap_operational::sap_order_to_cash_o2c_05_b_price_adjustments_based_on_product_availabilityperformance_tuning?Region={{ _filters['countries_md.country_name_landx']| url_encode }}&Year={{ _filters['sales_order_pricing.checkbox_kdatu_date']| url_encode }}&Sales+Org={{ _filters['sales_organizations_md.sales_org_name_vtext']| url_encode }}&Distribution+Channel={{ _filters['distribution_channels_md.distribution_channel_name_vtext']| url_encode }}&Product={{ _filters['materials_md.material_text_maktx']| url_encode }}&Division={{ _filters['divisions_md.division_name_vtext']| url_encode }}&Currency={{ _filters['currency_conversion_new.tcurr']| url_encode }}"
     }
     hidden: no
@@ -2170,7 +2170,7 @@ view: sales_orders {
     value_format_name: Greek_Number_Format
     sql: ${intercompany_price_glob_curr} ;;
     link: {
-      label: "Price Adjustments based on Product Availability"
+      label: "Ajustes de precio basados ​​en la disponibilidad del producto"
       url: "/dashboards/cortex_sap_operational::sap_order_to_cash_o2c_05_b_price_adjustments_based_on_product_availabilityperformance_tuning?Region={{ _filters['countries_md.country_name_landx']| url_encode }}&Year={{ _filters['sales_order_pricing.checkbox_kdatu_date']| url_encode }}&Sales+Org={{ _filters['sales_organizations_md.sales_org_name_vtext']| url_encode }}&Distribution+Channel={{ _filters['distribution_channels_md.distribution_channel_name_vtext']| url_encode }}&Product={{ _filters['materials_md.material_text_maktx']| url_encode }}&Division={{ _filters['divisions_md.division_name_vtext']| url_encode }}&Currency={{ _filters['currency_conversion_new.tcurr']| url_encode }}"
     }
     hidden: no
@@ -2222,6 +2222,8 @@ view: sales_orders {
   }
 
   measure: sales_order_netvalue_glob_curr_1 {
+    label: "Valor Neto de Pedido (Moneda Global 1)"
+    description: "Suma del valor neto de los pedidos de venta en la primera moneda global definida."
     type: number
     sql: SUM(${sales_order_netvalue_glob_curr}) ;;
     value_format : "0.00"
@@ -2230,27 +2232,33 @@ view: sales_orders {
 
 
   measure: sales_order_netvalue_global_currency_product {
+    label: "Valor neto en moneda global"
+    description: "valor neto del pedido de ventas en moneda global"
     type: number
     value_format_name: "Greek_Number_Format"
     sql: sum(${sales_order_netvalue_glob_curr}) ;;
     link: {
-      label: "Sales Performance by Product"
+      label: "Rendimiento de ventas por producto"
       url: "/dashboards/cortex_sap_operational::sap_order_to_cash_o2c_04_c_sales_performance_by_productperformance_tuning?Region={{ _filters['countries_md.country_name_landx']| url_encode }}&Year={{ _filters['sales_orders.creation_date_erdat_date']| url_encode }}&Sales+Org={{ _filters['sales_organizations_md.sales_org_name_vtext']| url_encode }}&Distribution+Channel={{ _filters['distribution_channels_md.distribution_channel_name_vtext']| url_encode }}&Product={{ _filters['materials_md.material_text_maktx']| url_encode }}&Division={{ _filters['divisions_md.division_name_vtext']| url_encode }}&Currency={{ _filters['currency_conversion_new.tcurr']| url_encode }}"
     }
     hidden: no
   }
 
   measure: sales_order_netvalue_global_currency_sales_org {
+    label: "Valor Neto de Pedido (Moneda Global)"
+    description: "Suma del valor neto de los pedidos de venta convertido a la moneda global de la organización de ventas."
     type: number
     value_format_name: "Greek_Number_Format"
     sql: sum(${sales_order_netvalue_glob_curr});;
     link: {
-      label: "Sales Performance by Sales_Org"
+      label: "Rendimiento de ventas por organización de ventas"
       url: "/dashboards/cortex_sap_operational::sap_order_to_cash_o2c_04_d_sales_performance_by_sales_orgperformance_tuning?Region={{ _filters['countries_md.country_name_landx']| url_encode }}&Year={{ _filters['sales_orders.creation_date_erdat_date']| url_encode }}&Sales+Org={{ _filters['sales_organizations_md.sales_org_name_vtext']| url_encode }}&Distribution+Channel={{ _filters['distribution_channels_md.distribution_channel_name_vtext']| url_encode }}&Product={{ _filters['materials_md.material_text_maktx']| url_encode }}&Division={{ _filters['divisions_md.division_name_vtext']| url_encode }}&Currency={{ _filters['currency_conversion_new.tcurr']| url_encode }}"
     }
     hidden: no
   }
   measure: sales_order_netvalue_global_currency_dist_channel {
+    label: "Valor Neto de Pedido (Moneda Global por Canal)"
+    description: "Suma del valor neto de los pedidos de venta convertido a la moneda global, segmentado por canal de distribución."
     type: number
     value_format_name: "Greek_Number_Format"
     sql: sum(${sales_order_netvalue_glob_curr});;
@@ -2261,6 +2269,8 @@ view: sales_orders {
     hidden: no
   }
   measure: sales_order_netvalue_global_currency_division {
+    label: "Valor Neto de Pedido (Moneda Global por División)"
+    description: "Suma del valor neto de los pedidos de venta convertido a la moneda global, segmentado por división."
     type: number
     value_format_name: "Greek_Number_Format"
     sql: sum(${sales_order_netvalue_glob_curr});;

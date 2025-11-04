@@ -7,14 +7,14 @@
   elements:
   - name: Sales Performance
     type: text
-    title_text: Sales Performance
-    subtitle_text: "<font color=\"#c1c1c1\">How are my Sales performing ?\t</font>"
+    title_text: Rendimiento de ventas
+    subtitle_text: "<font color=\"#c1c1c1\">¿Cómo van mis ventas?\t</font>"
     body_text: ''
     row: 2
     col: 0
     width: 24
     height: 1
-  - title: Sales Performance by Top 10 Products
+  - title: Rendimiento de ventas de los 10 productos principales
     name: Sales Performance by Top 10 Products
     model: cortex_sap_operational
     explore: sales_orders
@@ -50,11 +50,11 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: Sales Order Net Value, orientation: left, series: [{axisId: sales_orders.sales_order_netvalue_global_currency,
+    y_axes: [{label: Valor neto de la orden de venta, orientation: left, series: [{axisId: sales_orders.sales_order_netvalue_global_currency,
             id: sales_orders.sales_order_netvalue_global_currency, name: Sales Order
               Netvalue Global Currency}], showLabels: true, showValues: true, unpinAxis: false,
         tickDensity: default, tickDensityCustom: 5, type: linear}]
-    x_axis_label: Product
+    x_axis_label: Productos
     limit_displayed_rows_values:
       show_hide: show
       first_last: first
@@ -77,7 +77,7 @@
     col: 0
     width: 24
     height: 6
-  - title: Sales Performance by Top 5 Sales Org
+  - title: Rendimiento de ventas de las 5 principales organizaciones de ventas
     name: Sales Performance by Top 5 Sales Org
     model: cortex_sap_operational
     explore: sales_orders
@@ -113,11 +113,11 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: Sales Order Net Value, orientation: left, series: [{axisId: sales_orders.sales_order_netvalue_global_currency,
+    y_axes: [{label: Valor neto de la orden de venta, orientation: left, series: [{axisId: sales_orders.sales_order_netvalue_global_currency,
             id: sales_orders.sales_order_netvalue_global_currency, name: Sales Order
               Netvalue Global Currency}], showLabels: true, showValues: true, unpinAxis: false,
         tickDensity: default, tickDensityCustom: 5, type: linear}]
-    x_axis_label: Sales Org
+    x_axis_label: Organización de ventas
     limit_displayed_rows_values:
       show_hide: show
       first_last: first
@@ -140,7 +140,7 @@
     col: 0
     width: 24
     height: 6
-  - title: Sales Performance by Distribution Channel
+  - title: Rendimiento de ventas por canal de distribución
     name: Sales Performance by Distribution Channel
     model: cortex_sap_operational
     explore: sales_orders
@@ -215,7 +215,7 @@
     col: 0
     width: 12
     height: 6
-  - title: Sales Performance by Division
+  - title: Desempeño de ventas por división
     name: Sales Performance by Division
     model: cortex_sap_operational
     explore: sales_orders
@@ -257,7 +257,7 @@
     col: 12
     width: 12
     height: 6
-  - title: Total Customers
+  - title: Clientes totales
     name: Total Customers
     model: cortex_sap_operational
     explore: sales_orders
@@ -300,7 +300,7 @@
     col: 0
     width: 4
     height: 7
-  - title: Avg Sales of Top 10 Customers
+  - title: Ventas promedio de los 10 principales clientes
     name: Avg Sales of Top 10 Customers
     model: cortex_sap_operational
     explore: sales_orders
@@ -335,11 +335,11 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: Average Sales, orientation: left, series: [{axisId: sales_orders.sales_order_netvalue_global_currency_1,
+    y_axes: [{label: Ventas Promedio, orientation: left, series: [{axisId: sales_orders.sales_order_netvalue_global_currency_1,
             id: sales_orders.sales_order_netvalue_global_currency_1, name: Sales Order
               Netvalue Global Currency 1}], showLabels: true, showValues: true, unpinAxis: false,
         tickDensity: default, tickDensityCustom: 5, type: linear}]
-    x_axis_label: Customer
+    x_axis_label: Cliente
     limit_displayed_rows_values:
       show_hide: show
       first_last: first
@@ -363,7 +363,7 @@
     col: 4
     width: 10
     height: 7
-  - title: Avg Sales of Top 10 Products
+  - title: Ventas promedio de los 10 productos más vendidos
     name: Avg Sales of Top 10 Products
     model: cortex_sap_operational
     explore: sales_orders
@@ -398,11 +398,11 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: Average Sales, orientation: left, series: [{axisId: sales_orders.sales_order_net_price_global_currency,
+    y_axes: [{label: Ventas promedio, orientation: left, series: [{axisId: sales_orders.sales_order_net_price_global_currency,
             id: sales_orders.sales_order_net_price_global_currency, name: Sales Order
               Net Price Global Currency}], showLabels: true, showValues: true, unpinAxis: false,
         tickDensity: default, tickDensityCustom: 5, type: linear}]
-    x_axis_label: Product
+    x_axis_label: Productos
     limit_displayed_rows_values:
       show_hide: show
       first_last: first
@@ -457,7 +457,7 @@
     height: 2
   filters:
   - name: Year
-    title: Year
+    title: Fecha
     type: field_filter
     default_value: 2025/08/01 to 2025/08/31
     allow_multiple_values: true
@@ -471,7 +471,7 @@
     listens_to_filters: []
     field: sales_orders.creation_date_erdat_date
   - name: Currency
-    title: Currency
+    title: Moneda
     type: field_filter
     default_value: CLP
     allow_multiple_values: true
@@ -484,7 +484,7 @@
     listens_to_filters: []
     field: currency_conversion_new.tcurr
   - name: Region
-    title: Region
+    title: País
     type: field_filter
     default_value: ''
     allow_multiple_values: true
@@ -497,7 +497,7 @@
     listens_to_filters: []
     field: countries_md.country_name_landx
   - name: Sales Org
-    title: Sales Org
+    title: Organización de ventas
     type: field_filter
     default_value: ''
     allow_multiple_values: true
@@ -510,7 +510,7 @@
     listens_to_filters: []
     field: sales_organizations_md.sales_org_name_vtext
   - name: Distribution Channel
-    title: Distribution Channel
+    title: Canal de distribución
     type: field_filter
     default_value: ''
     allow_multiple_values: true
@@ -536,7 +536,7 @@
     listens_to_filters: []
     field: divisions_md.division_name_vtext
   - name: Product
-    title: Product
+    title: Producto
     type: field_filter
     default_value: ''
     allow_multiple_values: true
