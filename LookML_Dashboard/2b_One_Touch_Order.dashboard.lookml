@@ -18,7 +18,7 @@
       sales_orders.max_bill_to_party_name]
     filters:
       sales_orders.sales_order_status: Closed
-      deliveries.date_created_erdat_date: 2022/01/01 to 2022/04/22
+      deliveries.date_created_erdat_date: 2025/08/01 to 2025/08/31
       sales_orders.division_spart: ''
     sorts: [sales_orders.max_sold_to_party_name desc]
     limit: 500
@@ -171,7 +171,7 @@
   - name: Currency
     title: Currency
     type: field_filter
-    default_value: USD
+    default_value: CLP
     allow_multiple_values: true
     required: true
     ui_config:

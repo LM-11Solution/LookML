@@ -14,7 +14,7 @@ view: data_intelligence_ar {
     type: string
     suggest_explore: global_currency_list_pdt
     suggest_dimension: global_currency_list_pdt.to_currency_tcurr
-    default_value: "USD"
+    default_value: "CLP"
   }
 
   parameter: Day_Sales_Outstanding {

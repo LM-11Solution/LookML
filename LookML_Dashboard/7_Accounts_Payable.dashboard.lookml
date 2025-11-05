@@ -623,7 +623,7 @@
   - name: Target Currency
     title: Target Currency
     type: field_filter
-    default_value: USD
+    default_value: CLP
     allow_multiple_values: true
     required: true
     ui_config:
